@@ -11,8 +11,9 @@ import Tcs from '../assets/TCS.png'
 import META from '../assets/META_BIG.png'
 import { useNavigate } from "react-router-dom";
 
-const jobs = [
+export const jobs = [
   {
+    id:"1",
     title: "Data Analyst",
     company: "Tech Solutions Inc.",
     type: "3 months duration",
@@ -26,6 +27,7 @@ const jobs = [
     logo: "",
   },
   {
+    id:"2",
     title: "Marketing Manager",
     company: "dell",
     type: "3 months duration",
@@ -39,6 +41,7 @@ const jobs = [
     logo: "",
   },
   {
+    id:"3",
     title: "Senior Software Engineer",
     company: "Amazon",
     type: "Permanent",
@@ -52,6 +55,7 @@ const jobs = [
     logo: Amazon,
   },
   {
+    id:"4",
     title: "UX/UI Designer",
     company: "creative minds studio",
     type: "3 months duration",
@@ -65,6 +69,7 @@ const jobs = [
     logo: "",
   },
   {
+    id:"5",
     title: "Software Tester",
     company: "Infosys",
     type: "Full-Time",
@@ -78,6 +83,7 @@ const jobs = [
     logo: Infy,
   },
   {
+    id:"6",
     title: "HR Intern",
     company: "Wipro",
     type: "3 months duration",
@@ -91,6 +97,7 @@ const jobs = [
     logo: Wipro,
   },
   {
+    id:"7",
     title: "Business Analyst",
     company: "Cognizant",
     type: "Full-Time",
@@ -104,6 +111,7 @@ const jobs = [
     logo: CTS,
   },
   {
+    id:"8",
     title: "Web Developer Intern",
     company: "Startup Hub",
     type: "6 months duration",
@@ -124,8 +132,8 @@ export const Opportunities = () => {
     <section className='Opportunities-section'>
         <h2 className='Opportunities-title'>Opportunities Just For You</h2>
         <div className="Opportunities-job-list">
-        {jobs.map((job, index) => (
-          <OpportunitiesCard key={index} job={job} />
+        {jobs.map((job, id) => (
+          <OpportunitiesCard key={id} job={job} />
         ))}
       </div>
       <button onClick={() => navigate('/Job-portal/jobseeker/jobs')} className="Opportunities-view-more-btn">View More</button>
