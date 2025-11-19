@@ -161,7 +161,7 @@ export const jobs = [
   },
   {
     id:"4",
-    title: "UX/UI Designer",
+    title: "UX-UI Designer",
     company: "creative minds studio",
     type: "3 months duration",
     salary: "Unpaid",
@@ -192,7 +192,7 @@ export const jobs = [
         "Adhere to style standards on fonts, colors, and images."
     ] ,
     Key_Details:{
-        "Role": "UI/UX Designer",
+        "Role": "UI UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
         "Job Type": "Full-Time - On-site - Permanent",
@@ -241,7 +241,7 @@ export const jobs = [
         "Adhere to style standards on fonts, colors, and images."
     ] ,
     Key_Details:{
-        "Role": "UI/UX Designer",
+        "Role": "UI UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
         "Job Type": "Full-Time - On-site - Permanent",
@@ -405,6 +405,7 @@ export const jobs = [
     }
   }
 ];
+console.log(jobs)
 
 // export const jobs= 
 
@@ -424,7 +425,7 @@ export const Opportunities = () => {
         <h2 className='Opportunities-title'>Opportunities Just For You</h2>
         <div className="Opportunities-job-list">
         { jobs.map((job, id) => (
-          <OpportunitiesCard key={id} job={job} />
+          <OpportunitiesCard key={id} job={job}/>
         ))}
       </div>
       <button onClick={() => navigate('/Job-portal/jobseeker/jobs')} className="Opportunities-view-more-btn">View More</button>

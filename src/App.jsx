@@ -17,7 +17,13 @@ import { JobsTab } from './Components-Jobseeker/JobsTab'
 import { CompaniesTab } from './Components-Jobseeker/CompaniesTab'
 import { MyProfile } from './Components-Jobseeker/MyProfile'
 
-const router = createBrowserRouter([{
+const router = createBrowserRouter([
+//   {For Local Use}
+//   {
+//   path: '/',
+//   element: <Landingpage />,
+// },
+  {
   path: '/Job-portal',
   element: <Landingpage />,
 },
@@ -58,7 +64,7 @@ const router = createBrowserRouter([{
   element: <Ecreatepassword />,
 },
 {
-  path: '/Job-portal/jobseeker/OpportunityOverview/:id',
+  path: '/Job-portal/jobseeker/OpportunityOverview/:id/:title',
   element: <OpportunityOverview />,
 },
 {
