@@ -25,7 +25,7 @@ export const OpportunityOverview = () => {
 
   const { id } = useParams()
   const job = jobs[id - 1]
-
+  console.log(jobs)
   return (
     <>
       <header className="header">
@@ -127,7 +127,8 @@ export const OpportunityOverview = () => {
                     <div className="opp-job-highlights">
                       <h3>Job Highlights</h3>
                       <ul>
-                        <li>Freshers can also apply.</li>
+                     
+                        <li>{job.job-hig}</li>
                         <li>Proven work experience as a UI/UX Designer.</li>
                         <li>Good time-management skills.</li>
                       </ul>

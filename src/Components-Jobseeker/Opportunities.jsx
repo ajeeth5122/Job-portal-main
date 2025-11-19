@@ -126,16 +126,16 @@ import { data, useNavigate } from "react-router-dom";
 //   },
 // ];
 
-const jobdata= 
+export const jobs= 
 
 useEffect(()=>{
 fetch("http://localhost:3000/jobs")
-.then(Response=>Response.json())
-.then(data=>jobdata(data))
+.then(resp=>resp.json())
+.then(data=>jobs(data))
 .catch(error=>console.error("error:",error))
 },[])
 
-
+ 
 
 export const Opportunities = () => {
   const navigate = useNavigate();
