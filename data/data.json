@@ -113,7 +113,7 @@
     "posted": "2 days ago",
     "openings":2 ,
     "applicants": 50,
-    "logo": "Amazon",
+    "logo": "http://localhost:3000/jobs/AMZN_BIG.png",
     "Job-Highlights":[
        "Freshers can also apply",
        "Proven work experience as a UI/UX Designer",
@@ -211,7 +211,7 @@
     "posted": "5 days ago",
     "openings": 3,
     "applicants": 65,
-    "logo": "Infy",
+    "logo": "",
     "Job-Highlights":[
        "Freshers can also apply",
        "Proven work experience as a UI/UX Designer",
@@ -260,7 +260,7 @@
     "posted": "3 days ago",
     "openings": 4,
     "applicants": 90,
-    "logo": "Wipro",
+    "logo": "",
     "Job-Highlights":[
        "Freshers can also apply",
        "Proven work experience as a UI/UX Designer",
@@ -309,7 +309,7 @@
     "posted": "1 week ago",
     "openings": 2,
     "applicants": 70,
-    "logo": "CTS",
+    "logo": "",
     "Job-Highlights":[
        "Freshers can also apply",
        "Proven work experience as a UI/UX Designer",
