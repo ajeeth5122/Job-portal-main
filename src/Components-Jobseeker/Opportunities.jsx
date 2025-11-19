@@ -25,6 +25,41 @@ export const jobs = [
     openings: 5,
     applicants: 40,
     logo: "",
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"2",
@@ -39,6 +74,41 @@ export const jobs = [
     openings: 1,
     applicants: 80,
     logo: "",
+   Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"3",
@@ -53,6 +123,41 @@ export const jobs = [
     openings: 2,
     applicants: 50,
     logo: Amazon,
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"4",
@@ -67,6 +172,41 @@ export const jobs = [
     openings: 1,
     applicants: 80,
     logo: "",
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"5",
@@ -81,6 +221,41 @@ export const jobs = [
     openings: 3,
     applicants: 65,
     logo: Infy,
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"6",
@@ -95,6 +270,41 @@ export const jobs = [
     openings: 4,
     applicants: 90,
     logo: Wipro,
+    Job_Highlights:[
+       "* Freshers can also apply",
+       "* Proven work experience as a UI/UX Designer",
+       "* Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+       "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+       "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+       "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+     ],
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"7",
@@ -109,6 +319,41 @@ export const jobs = [
     openings: 2,
     applicants: 70,
     logo: CTS,
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
   },
   {
     id:"8",
@@ -123,7 +368,42 @@ export const jobs = [
     openings: 2,
     applicants: 45,
     logo: "",
-  },
+    Job_Highlights:[
+       "Freshers can also apply",
+       "Proven work experience as a UI/UX Designer",
+       "Good time-management skills"
+    ],
+     companyOverview:"Finding customers made easy through the vast profile of database that we have through market research.Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions We derive intelligence from our data to help brands maximize ROI",
+     job_Description :"We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.",
+     Responsibilities :[
+        "Gather and evaluate user requirements in collaboration with product managers and engineers",
+        "Illustrate design ideas using storyboards, process flows, and sitemaps",
+        "Design graphic user interface elements such as menus, tabs, and widgets.",
+        "Build page navigation buttons and search fields",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.",
+        "Create original graphic designs (e.g. images, sketches, and tables).",
+        "Prepare and present rough drafts to internal teams and key stakeholders.",
+        "Identify and troubleshoot UX problems (e.g. responsiveness issues)",
+        "Conduct layout adjustments based on user feedback.",
+        "Adhere to style standards on fonts, colors, and images."
+    ] ,
+    Key_Details:{
+        "Role": "UI/UX Designer",
+        "Industry Type":"IT Services",
+        "Department": "UX, UI, Design",
+        "Job Type": "Full-Time - On-site - Permanent",
+        "Location": "Chennai",
+        Key_Skills:[
+            "UX Research",
+            "Wireframes",
+            "Figma",
+            "Photoshop",
+            "HTML",
+            "CSS"
+
+        ]
+    }
+  }
 ];
 
 // export const jobs= 

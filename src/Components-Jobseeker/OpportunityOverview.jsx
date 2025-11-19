@@ -127,32 +127,31 @@ export const OpportunityOverview = () => {
                     <div className="opp-job-highlights">
                       <h3>Job Highlights</h3>
                       <ul>
-                     
-                        <li>{job.job-hig}</li>
-                        <li>Proven work experience as a UI/UX Designer.</li>
-                        <li>Good time-management skills.</li>
-                      </ul>
+                      
+                        {job.Job_Highlights.map((high,index)=>
+                        <li key={index}>{high}</li>)}
+                        </ul>
+                        {/* <li>Proven work experience as a UI/UX Designer.</li>
+                        <li>Good time-management skills.</li> */}
+                      
                     </div>
       
                     <h3>Company Overview</h3>
                     <p>
-                      Finding customers made easy through the vast profile of database that we have through market research.
-                      Billions United is a brand that empowers other brand.Founded in 2010, Billions United is a preferred choice for data and marketing solutions.
-                      We derive intelligence from our data to help brands maximize ROI.
+                      {job.companyOverview}
                     </p>
       
                     <h3>Job Description</h3>
                     <p>
-                      We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients.
-                      You will be responsible for gathering user requirements, designing graphic elements, and building navigation components.
-                      If you have experience with design software, wireframe tools, and a strong design portfolio, we would love to meet you.
-                      Ultimately, you will create both functional and appealing features that address client needs and help grow our customer base.
+                      {job.job_Description}
                     </p>
       
                     <h3>Responsibilities</h3>
-                    <ul>
-                      <li>Gather and evaluate user requirements in collaboration with product managers and engineers.</li>
-                      <li>Illustrate design ideas using storyboards, process flows, and sitemaps.</li>
+                    
+                    <ul  >
+                      {job.Responsibilities.map((resp,index)=> 
+                      <li key={index}>{resp}</li>)}
+                      {/* <li>Illustrate design ideas using storyboards, process flows, and sitemaps.</li>
                       <li>Design graphic user interface elements such as menus, tabs, and widgets.</li>
                       <li>Build page navigation buttons and search fields.</li>
                       <li>Develop UI mockups and prototypes that clearly illustrate site functionality and appearance.</li>
@@ -160,20 +159,21 @@ export const OpportunityOverview = () => {
                       <li>Prepare and present rough drafts to internal teams and key stakeholders.</li>
                       <li>Identify and troubleshoot UX problems (e.g. responsiveness issues).</li>
                       <li>Conduct layout adjustments based on user feedback.</li>
-                      <li>Adhere to style standards on fonts, colors, and images.</li>
+                      <li>Adhere to style standards on fonts, colors, and images.</li> */}
                     </ul>
-      
+                    
                     <h3>Key Details</h3>
-                    <p><strong>Role:</strong> UI/UX Designer</p>
-                    <p><strong>Industry Type:</strong> IT Services</p>
-                    <p><strong>Department:</strong> UX, UI, Design</p>
-                    <p><strong>Job Type:</strong> Full-Time - On-site - Permanent</p>
-                    <p><strong>Location:</strong> Chennai</p>
+                    <p><strong>Role:</strong> {job.Key_Details.Role}</p>
+                    <p><strong>Industry Type:</strong>{job.Key_Details['Industry Type']}</p>
+                    <p><strong>Department:</strong> {job.Key_Details.Department}</p>
+                    <p><strong>Job Type:</strong> {job.Key_Details['Job Type']}</p>
+                    <p><strong>Location:</strong> {job.Key_Details.Location}</p>
       
                     <h3>Key Skills</h3>
                     <div className="opp-key-skills-container">
-                      <span>UX Research</span>
-                      <span>Wireframes</span>
+                      {job.Key_Details.Key_Skills.map((skill,index)=>
+                      <span key={index}> {skill}</span>)}
+                      {/* <span>Wireframes</span>
                       <span>Figma</span>
                       <span>Photoshop</span>
                       <span>HTML</span>
@@ -183,7 +183,7 @@ export const OpportunityOverview = () => {
                       <span>prototype</span>
                       <span>problem solving</span>
                       <span>interactions</span>
-                      <span>xd</span>
+                      <span>xd</span> */}
                     </div>
       
                     <hr className="Opportunities-separator" />
