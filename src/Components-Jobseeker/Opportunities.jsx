@@ -45,10 +45,13 @@ export const jobs = [
         "Adhere to style standards on fonts, colors, and images."
     ] ,
     Key_Details:{
-        "Role": "UI/UX Designer",
+        // "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+          "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -97,7 +100,10 @@ export const jobs = [
         "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+          "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -146,7 +152,10 @@ export const jobs = [
         "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+          "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -192,10 +201,11 @@ export const jobs = [
         "Adhere to style standards on fonts, colors, and images."
     ] ,
     Key_Details:{
-        "Role": "UI UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -244,7 +254,10 @@ export const jobs = [
         "Role": "UI UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+        "Job_Type": "Full-Time",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -293,7 +306,10 @@ export const jobs = [
         "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+        "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -342,7 +358,10 @@ export const jobs = [
         "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+        "Job_Type": "Full-Time",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",
@@ -391,7 +410,10 @@ export const jobs = [
         "Role": "UI/UX Designer",
         "Industry Type":"IT Services",
         "Department": "UX, UI, Design",
-        "Job Type": "Full-Time - On-site - Permanent",
+        // "Job_Type": "Full-Time - On-site - Permanent",
+        "Job_Type": "Internship",
+         "Work_type": "On-site",
+          "Work_Category": "Permanent",
         "Location": "Chennai",
         Key_Skills:[
             "UX Research",

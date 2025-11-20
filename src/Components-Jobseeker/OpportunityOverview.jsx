@@ -26,6 +26,8 @@ export const OpportunityOverview = () => {
   const { id } = useParams()
   const job = jobs[id - 1]
   console.log(jobs)
+
+  
   return (
     <>
       <header className="header">
@@ -85,7 +87,7 @@ export const OpportunityOverview = () => {
                         <h2 className="opp-topcard-job-title">{job.title}</h2>
                         <h5 className="Opportunities-job-company">{job.company}<span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> 3.4 <span className="Opportunities-divider">|</span><span className="opp-reviews"> 522 Reviews</span></h5>
                       </div>
-                      <div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toLowerCase()}</div>
+                      <div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toUpperCase()}</div>
                     </div>
       
                     <div className="Opportunities-job-details">
@@ -163,10 +165,10 @@ export const OpportunityOverview = () => {
                     </ul>
                     
                     <h3>Key Details</h3>
-                    <p><strong>Role:</strong> {job.Key_Details.Role}</p>
+                    <p><strong>Role:</strong> {job.title}</p>
                     <p><strong>Industry Type:</strong>{job.Key_Details['Industry Type']}</p>
                     <p><strong>Department:</strong> {job.Key_Details.Department}</p>
-                    <p><strong>Job Type:</strong> {job.Key_Details['Job Type']}</p>
+                    <p><strong>Job Type:</strong> {job.Key_Details.Job_Type} | {job.Key_Details.Work_type} | {job.Key_Details.Work_Category}</p>
                     <p><strong>Location:</strong> {job.Key_Details.Location}</p>
       
                     <h3>Key Skills</h3>
