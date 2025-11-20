@@ -29,10 +29,10 @@ export const OpportunityOverview = () => {
 
   const currentJobId = Number(id);
 
-  const job = jobs.find(j => j.id === currentJobId) || jobs[currentJobId - 1];
+  const job = jobs.find(jb => jb.id === currentJobId) || jobs[currentJobId - 1];
 
   const similarJobs = jobs.filter((sim) => {
-      return sim.id !== job.id && sim.Key_Details.Job_Type=== job.Key_Details.Job_Type;
+      return sim.id !== job.id && sim.Key_Details.Job_Type === job.Key_Details.Job_Type;
   });
 
   console.log(similarJobs)
