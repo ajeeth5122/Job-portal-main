@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Opportunities.css'
 import {OpportunitiesCard} from "./OpportunitiesCard";
 import Apple from '../assets/Apple-Logo.png'
@@ -427,21 +427,10 @@ export const jobs = [
     }
   }
 ];
-console.log(jobs)
-
-// export const jobs= 
-
-// useEffect(()=>{
-// fetch("http://localhost:3000/jobs")
-// .then(resp=>resp.json())
-// .then(data=>jobs.push(data))
-// .catch(error=>console.error("error:",error))
-// },[])
-
- 
 
 export const Opportunities = () => {
   const navigate = useNavigate();
+
   return (
     <section className='Opportunities-section'>
         <h2 className='Opportunities-title'>Opportunities Just For You</h2>

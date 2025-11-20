@@ -24,10 +24,18 @@ export const OpportunityOverview = () => {
   const navigate = useNavigate();
 
   const { id } = useParams()
-  const job = jobs[id - 1]
-  console.log(jobs)
-
+  // const job = jobs[id - 1]
   
+
+  const currentJobId = Number(id);
+
+  const job = jobs.find(j => j.id === currentJobId) || jobs[currentJobId - 1];
+
+  const similarJobs = jobs.filter((sim) => {
+      return sim.id !== job.id && sim.type=== job.type;
+  });
+
+  console.log(similarJobs)
   return (
     <>
       <header className="header">
@@ -191,32 +199,33 @@ export const OpportunityOverview = () => {
                     <hr className="Opportunities-separator" />
       
                     <div className="opp-share-job">
-                      <div>
-                        <p>Share This job</p>
-                        <div className='opp-socials'>
-                          <div><img src={linkedin} className='opp-socials-icon' alt="linkedin" /></div>
-                          <div><img src={facebook} className='opp-socials-icon' alt="facebook" /></div>
-                          <div><img src={twitter} className='opp-socials-icon' alt="twitter" /></div>
-                        </div>
-                      </div>
-                      <button className="opp-report-btn">Report this job</button>
+                    <div>
+                    <p>Share This job</p>
+                    <div className='opp-socials'>
+                    <div><img src={linkedin} className='opp-socials-icon' alt="linkedin" /></div>
+                    <div><img src={facebook} className='opp-socials-icon' alt="facebook" /></div>
+                    <div><img src={twitter} className='opp-socials-icon' alt="twitter" /></div>
                     </div>
-                  </div>
-                </div>
-                {/* Similar Jobs */}
-                <div className="opp-job-sidebar">
-                  <h3>Similar Jobs</h3>
-                  <div className="opp-similar-job">
+                    </div>
+                    <button className="opp-report-btn">Report this job</button>
+                    </div>
+                    </div>
+                    </div>
+                  {/* Similar Jobs */}
+                    <div className="opp-job-sidebar">
+                    <h3>Similar Jobs</h3>
+                    {similarJobs.length > 0 ? similarJobs.map((sim)=>(
+                      <div className="opp-similar-job">
                     <div className="Opportunities-job-header">
                       <div>
-                        <h2 className="similar-job-title">UI/UX Designer</h2>
-                        <p className="similar-job-company">Creative Minds Studio <span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> 3.4 <span className="Opportunities-divider">|</span><span> 522 Reviews</span></p>
+                        <h2 className="similar-job-title">{sim.title}</h2>
+                        <p className="similar-job-company">{sim.company} <span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> 3.4 <span className="Opportunities-divider">|</span><span> 522 Reviews</span></p>
                       </div>
                       <div className="similar-job-logo-placeholder">C</div>
                     </div>
                     <div className="Opportunities-job-details">
-                      <p className='Opportunities-detail-line'>Full-time . Hybrid, Permanent</p>
-                      <p className='Opportunities-detail-line'><img src={place} className='card-icons' />Chennai</p>
+                      <p className='Opportunities-detail-line'>{sim.Key_Details.Job_Type} . {sim.Key_Details.Work_type} , {sim.Key_Details.Work_Category}</p>
+                      <p className='Opportunities-detail-line'><img src={place} className='card-icons' />{sim.location}</p>
                     </div>
                     <div className="similar-job-footer">
                       <a href="#" className="suggest-link">
@@ -227,8 +236,14 @@ export const OpportunityOverview = () => {
                       </p>
                     </div>
                   </div>
+                    )):(
+                      <div>
+                         <p>Currunty No openings Available </p> 
+                      </div>
+                    )}
+                    
       
-                  <div className="opp-similar-job">
+                  {/* <div className="opp-similar-job">
                     <div className="Opportunities-job-header">
                       <div>
                         <h2 className="similar-job-title">UI Designer</h2>
@@ -314,7 +329,7 @@ export const OpportunityOverview = () => {
                         Posted 2 days ago
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
