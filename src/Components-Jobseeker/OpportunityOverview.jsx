@@ -32,7 +32,7 @@ export const OpportunityOverview = () => {
   const job = jobs.find(j => j.id === currentJobId) || jobs[currentJobId - 1];
 
   const similarJobs = jobs.filter((sim) => {
-      return sim.id !== job.id && sim.type=== job.type;
+      return sim.id !== job.id && sim.Key_Details.Job_Type=== job.Key_Details.Job_Type;
   });
 
   console.log(similarJobs)
@@ -215,7 +215,7 @@ export const OpportunityOverview = () => {
                     <div className="opp-job-sidebar">
                     <h3>Similar Jobs</h3>
                     {similarJobs.length > 0 ? similarJobs.map((sim)=>(
-                      <div className="opp-similar-job">
+                      <div key={sim.id} className="opp-similar-job">
                     <div className="Opportunities-job-header">
                       <div>
                         <h2 className="similar-job-title">{sim.title}</h2>
