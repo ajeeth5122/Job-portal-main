@@ -759,7 +759,6 @@ export const jobs = [
     }
   }
 ];
-
 export const Opportunities = () => {
   const navigate = useNavigate();
 
