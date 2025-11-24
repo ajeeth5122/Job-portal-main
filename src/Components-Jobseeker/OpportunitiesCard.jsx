@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './OpportunitiesCard.css'
 import time from '../assets/opportunity_time.png'
 import experience from '../assets/opportunity_bag.png'
@@ -7,16 +7,19 @@ import { useNavigate } from 'react-router-dom'
 import { jobs } from './Opportunities'
 
 export const OpportunitiesCard = (props) => {
-
+    
+    
     const { job } = props;
     const logoContent = job.logo ? (<img src={job.logo} alt={job.company} className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toUpperCase()}</div>)
     const navigate = useNavigate()
     const HandleClick = () => {
         navigate(`/Job-portal/jobseeker/OpportunityOverview/${job.id}`)
     }
+
+   
     return (
         <>
-
+            
             <div onClick={() => HandleClick()} className="Opportunities-job-card">
 
                 <div className="Opportunities-job-header">
@@ -29,7 +32,7 @@ export const OpportunitiesCard = (props) => {
                 </div>
 
                 <div className="Opportunities-job-details">
-                    <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.type}<span className="Opportunities-divider">|</span>{job.salary}</p>
+                    <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.duration}<span className="Opportunities-divider">|</span>{job.salary}</p>
                     <p className='Opportunities-detail-line'><img src={experience} className='card-icons' />{job.experience}</p>
                     <p className='Opportunities-detail-line'><img src={place} className='card-icons' />{job.location}</p>
                 </div>

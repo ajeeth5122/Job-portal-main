@@ -24,21 +24,23 @@ export const OpportunityOverview = () => {
   const navigate = useNavigate();
 
   const { id } = useParams()
-  // const job = jobs[id - 1]
   
 
   const currentJobId = id;
 
-  const job = jobs.find(jb => jb.id === currentJobId || currentJobId[id- 1]);
+  const job = jobs.find(jb => jb.id === currentJobId) ;
 
   const similarJobs = jobs.filter((sim) => {
-      return sim.id !== job.id && sim.Key_Details.Key_Skills.some((skill)=> job.Key_Details.Key_Skills.includes(skill));
+      // return sim.id !== job.id && sim.Key_Details.Key_Skills.some((skill)=> job.Key_Details.Key_Skills.includes(skill));
+      return sim.id !== job.id && sim.Key_Details.Department === job.Key_Details.Department;
   });
-
-  console.log(similarJobs)
+  
+  
   return (
     <>
       <header className="header">
+        {console.log(job)}
+        
               <div className="logo">job portal</div>
               <nav className="nav-links">
                 <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -99,7 +101,7 @@ export const OpportunityOverview = () => {
                     </div>
       
                     <div className="Opportunities-job-details">
-                      <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.type}<span className="Opportunities-divider">|</span>₹ 20,000 - 25,000/month</p>
+                      <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.duration}<span className="Opportunities-divider">|</span>₹ 20,000 - 25,000/month</p>
                       <p className='Opportunities-detail-line'><img src={experience} className='card-icons' />{job.experience}</p>
                       <p className='Opportunities-detail-line'><img src={place} className='card-icons' />{job.location}</p>
                     </div>
@@ -121,7 +123,7 @@ export const OpportunityOverview = () => {
       
                     <div className="Opportunities-job-footer">
                       <div className="Opportunities-job-meta">
-                        <p>Posted: {job.posted} <span className="Opportunities-divider">|</span> Openings: {job.openings} <span className="Opportunities-divider">|</span> Applicants: {job.applicants}</p>
+                        <p>Posted:{job.posted} <span className="Opportunities-divider">|</span> Openings: {job.openings} <span className="Opportunities-divider">|</span> Applicants: {job.applicants}</p>
                       </div>
       
                       <div className="Opportunities-job-actions">
@@ -174,10 +176,10 @@ export const OpportunityOverview = () => {
                     
                     <h3>Key Details</h3>
                     <p><strong>Role:</strong> {job.title}</p>
-                    <p><strong>Industry Type:</strong>{job.Key_Details['Industry Type']}</p>
-                    <p><strong>Department:</strong> {job.Key_Details.Department}</p>
-                    <p><strong>Job Type:</strong> {job.Key_Details.Job_Type} | {job.Key_Details.Work_type} | {job.Key_Details.Work_Category}</p>
-                    <p><strong>Location:</strong> {job.Key_Details.Location}</p>
+                    <p><strong>Industry Type: </strong>{job.Key_Details.Industry_Type}</p>
+                    <p><strong>Department: </strong> {job.Key_Details.Department}</p>
+                    <p><strong>Job Type: </strong> {job.Key_Details.Job_Type} | {job.Key_Details.Work_type} | {job.Key_Details.Work_Category}</p>
+                    <p><strong>Location: </strong> {job.Key_Details.location}</p>
       
                     <h3>Key Skills</h3>
                     <div className="opp-key-skills-container">
@@ -208,6 +210,7 @@ export const OpportunityOverview = () => {
                     </div>
                     </div>
                     <button className="opp-report-btn">Report this job</button>
+                    
                     </div>
                     </div>
                     </div>

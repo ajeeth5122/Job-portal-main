@@ -157,7 +157,7 @@ export const jobs = [
     ],
     Key_Details: {
       "Industry_Type": "Financial Services, Consulting",
-      "Department": "Finance, Accounting",
+      "Department": "Data Science, Research",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
       "location": "Mumbai",
@@ -231,7 +231,7 @@ export const jobs = [
       "Participate in on-call rotation for high-priority issues."
     ],
     Key_Details: {
-      "Industry Type": "IT Services, Cloud Computing",
+      "Industry_Type": "IT Services, Cloud Computing",
       "Department": "DevOps, Infrastructure",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -268,7 +268,7 @@ export const jobs = [
       "Manage and adhere to a strict content production schedule."
     ],
     Key_Details: {
-      "Industry Type": "Marketing & Advertising",
+      "Industry_Type": "Marketing & Advertising",
       "Department": "Content, Editorial",
       "Job_Type": "Full-Time",
       "Work_type": "Hybrid",
@@ -305,7 +305,7 @@ export const jobs = [
       "Collaborate with cross-functional teams including chemistry and toxicology."
     ],
     Key_Details: {
-      "Industry Type": "Pharmaceuticals, Biotechnology",
+      "Industry_Type": "Pharmaceuticals, Biotechnology",
       "Department": "R&D, Science",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -342,7 +342,7 @@ export const jobs = [
       "Maintain high customer satisfaction scores and adherence to SLAs."
     ],
     Key_Details: {
-      "Industry Type": "Telecommunications, IT Services",
+      "Industry_Type": "Telecommunications, IT Services",
       "Department": "Technical Support, Customer Service",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -359,7 +359,7 @@ export const jobs = [
     experience: "0 to 3 years of experience",
     location: "Delhi",
     tags: ["Full-Time"],
-    posted: "7 days ago",
+    posted: "14112025",
     openings: 15,
     applicants: 180,
     logo: "",
@@ -379,7 +379,7 @@ export const jobs = [
       "Stay updated on product specifications, features, and competitor offerings."
     ],
     Key_Details: {
-      "Industry Type": "Automotive, Retail",
+      "Industry_Type": "Automotive, Retail",
       "Department": "Sales, Business Development",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -396,7 +396,7 @@ export const jobs = [
     experience: "Freshers/Students",
     location: "Remote",
     tags: ["Internship", "Remote"],
-    posted: "2 days ago",
+    posted: "19/11/2025",
     openings: 5,
     applicants: 250,
     logo: "",
@@ -416,7 +416,7 @@ export const jobs = [
       "Contribute to documentation of model architecture and training process."
     ],
     Key_Details: {
-      "Industry Type": "Artificial Intelligence, Data Science",
+      "Industry_Type": "Artificial Intelligence, Data Science",
       "Department": "Data Science, Research",
       "Job_Type": "Internship",
       "Work_type": "Remote",
@@ -433,7 +433,7 @@ export const jobs = [
     experience: "3 to 6 years of experience",
     location: "Bangalore",
     tags: ["Full-Time"],
-    posted: "9 days ago",
+    posted: "12/11/2025",
     openings: 4,
     applicants: 50,
     logo: "",
@@ -453,7 +453,7 @@ export const jobs = [
       "Prepare site reports, progress documentation, and material procurement lists."
     ],
     Key_Details: {
-      "Industry Type": "Construction, Real Estate",
+      "Industry_Type": "Construction, Real Estate",
       "Department": "Engineering, Projects",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -470,7 +470,7 @@ export const jobs = [
     experience: "0 to 2 years of experience",
     location: "Noida",
     tags: ["Full-Time"],
-    posted: "1 day ago",
+    posted: "20/11/2025",
     openings: 7,
     applicants: 140,
     logo: "",
@@ -490,7 +490,7 @@ export const jobs = [
       "Build talent pipelines for future hiring needs."
     ],
     Key_Details: {
-      "Industry Type": "Recruitment, Human Resources",
+      "Industry_Type": "Recruitment, Human Resources",
       "Department": "Human Resources, Talent Acquisition",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -507,7 +507,7 @@ export const jobs = [
     experience: "2 to 4 years of experience",
     location: "Mumbai",
     tags: ["Full-Time"],
-    posted: "12 days ago",
+    posted: "25/10/2025",
     openings: 5,
     applicants: 90,
     logo: "",
@@ -527,7 +527,7 @@ export const jobs = [
       "Integrate front-end logic with server-side APIs (REST/GraphQL)."
     ],
     Key_Details: {
-      "Industry Type": "FinTech, Software Product",
+      "Industry_Type": "FinTech, Software Product",
       "Department": "Engineering, Development",
       "Job_Type": "Full-Time",
       "Work_type": "Hybrid",
@@ -564,7 +564,7 @@ export const jobs = [
       "Ensure compliance with transportation, safety, and labor regulations."
     ],
     Key_Details: {
-      "Industry Type": "Logistics, Supply Chain",
+      "Industry_Type": "Logistics, Supply Chain",
       "Department": "Operations, Management",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -602,7 +602,7 @@ export const jobs = [
       "Support testing activities and correlate test results with analytical models."
     ],
     Key_Details: {
-      "Industry Type": "Aerospace & Defense",
+      "Industry_Type": "Aerospace & Defense",
       "Department": "Engineering, R&D",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -639,7 +639,7 @@ export const jobs = [
       "Maintain strict adherence to infection control and patient safety protocols."
     ],
     Key_Details: {
-      "Industry Type": "Healthcare, Hospital",
+      "Industry_Type": "Healthcare, Hospital",
       "Department": "Nursing, Medical",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -676,7 +676,7 @@ export const jobs = [
       "Manage and develop a team of junior financial analysts."
     ],
     Key_Details: {
-      "Industry Type": "FMCG, Consumer Goods",
+      "Industry_Type": "FMCG, Consumer Goods",
       "Department": "Finance, Strategy",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -713,7 +713,7 @@ export const jobs = [
       "Respond promptly to system failures and emergencies."
     ],
     Key_Details: {
-      "Industry Type": "Energy, Utilities, Renewable Power",
+      "Industry_Type": "Energy, Utilities, Renewable Power",
       "Department": "Maintenance, Operations",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -750,7 +750,7 @@ export const jobs = [
       "Collaborate with development teams to ensure security is built into the SDLC."
     ],
     Key_Details: {
-      "Industry Type": "Cybersecurity, IT Consulting",
+      "Industry_Type": "Cybersecurity, IT Consulting",
       "Department": "Security, IT",
       "Job_Type": "Full-Time",
       "Work_type": "On-site",
@@ -759,18 +759,26 @@ export const jobs = [
     }
   }
 ];
-export const Opportunities = () => {
+  export const Opportunities = () => {
   const navigate = useNavigate();
 
+  const [visibleCount, setVisibleCount] = useState(8);
+
+  const itemsToDisplay = jobs.slice(0, visibleCount);
+
+   const HandleViewMore = () => {
+    setVisibleCount(jobs.length);
+  };
+  
   return (
     <section className='Opportunities-section'>
         <h2 className='Opportunities-title'>Opportunities Just For You</h2>
         <div className="Opportunities-job-list">
-        { jobs.map((job, id) => (
+        { itemsToDisplay.map((job, id) => (
           <OpportunitiesCard key={id} job={job}/>
         ))}
       </div>
-      <button onClick={() => navigate('/Job-portal/jobseeker/jobs')} className="Opportunities-view-more-btn">View More</button>
+      <button onClick={() => HandleViewMore()} className="Opportunities-view-more-btn">View More</button>
     </section>
   )
 }
