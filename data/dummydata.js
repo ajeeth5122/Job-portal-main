@@ -2800,7 +2800,7 @@ export const Joblist = [
     openings: 2,
     applicants: 35,
     WorkType: "On-site",
-    logo: Cts,
+    logo: AppleLogo,
     IndustryType: "Corporate Functions",
     Department: "Finance, Accounting",
     JobHighlights: [

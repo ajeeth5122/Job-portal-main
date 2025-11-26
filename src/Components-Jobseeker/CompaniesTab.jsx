@@ -33,7 +33,7 @@ export const CompaniesTab = () => {
 
   const [showNotification, setShowNotification] = useState(false);
   const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
-
+  const displayCompanies = companiesList.slice(0,8);
 
 
   return (
@@ -89,7 +89,7 @@ export const CompaniesTab = () => {
           <h1 className="carousel-title">Find Jobs By Companies</h1>
         </div>
         <div className="companies-tab-grid">
-          {companiesList.map((comp) => (
+          {displayCompanies.map((comp) => (
             <div key={comp.id} className="companies-tab-card">
               <div className="companies-tab-logo-container">
                 <img src={comp.logo} alt={comp.company} className="companies-tab-logo" />
@@ -101,7 +101,7 @@ export const CompaniesTab = () => {
                 <span className="companies-tab-separator">|</span>
                 <span className="companies-tab-reviews">{comp.reviewNo} reviews</span>
               </div>
-              <p className="companies-tab-desc">{comp.companyOverview}</p>
+              <h5 className="companies-tab-desc">ID:{comp.companyId}</h5>
               <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${comp.company}`)} className="companies-tab-view-jobs-btn">View Jobs</button>
             </div>
           ))}
