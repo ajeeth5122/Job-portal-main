@@ -32,8 +32,8 @@ export const OpportunitiesCard = (props) => {
                 </div>
 
                 <div className="Opportunities-job-details">
-                    <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.duration}<span className="Opportunities-divider">|</span>{job.salary}</p>
-                    <p className='Opportunities-detail-line'><img src={experience} className='card-icons' />{job.experience}</p>
+                    <p className='Opportunities-detail-line'><img src={time} className='card-icons' />{job.duration}<span className="Opportunities-divider">|</span>{job.salary} LPA</p>
+                    <p className='Opportunities-detail-line'><img src={experience} className='card-icons' />{job.experience} years of experience</p>
                     <p className='Opportunities-detail-line'><img src={place} className='card-icons' />{job.location}</p>
                 </div>
 
