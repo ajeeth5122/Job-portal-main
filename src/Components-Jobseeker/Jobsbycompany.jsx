@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from "react-slick";
 import Wipro from '../assets/WIT.png'
 import CTS from '../assets/CTSH_BIG.png'
@@ -63,7 +63,14 @@ const findbyCompaniesNameList = [
     }
 ];
 
+
+
 export const Jobsbycompany = () => {
+
+    
+
+
+
     const navigate = useNavigate();
     const CustomPrevArrow = ({ onClick }) => (
         <div className="custom-arrow prev" onClick={onClick}>
@@ -103,12 +110,12 @@ export const Jobsbycompany = () => {
                             <p className='carousel-company-rating'><span className="star"><img src={starIcon} /></span> {company.rating} | {company.reviews} reviews</p>
                         </div>
                         <p className="carousel-desc">{company.desc}</p>
-                        <button className="carousel-view-jobs">View jobs</button>
+                        <button onClick={()=>handleSelectCompany(`${company.name}`)} className="carousel-view-jobs">View jobs</button>
                     </div>
                 ))}
             </Slider>
             <div className="carousel-view-all-wrapper">
-                <button onClick={() => navigate('/Job-portal/jobseeker/jobs')} className="carousel-view-all">View All Companies</button>
+                <button onClick={() => navigate('/Job-portal/jobseeker/companies')} className="carousel-view-all">View All Companies</button>
             </div>
         </section>
     )

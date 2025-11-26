@@ -20,13 +20,7 @@ import linkedin from '../assets/socials-linkedin.png'
 import facebook from '../assets/socials-facebook.png'
 import { jobs } from './Opportunities';
 
-export const OpportunityOverview = () => {
-  const navigate = useNavigate();
-
-  const { id } = useParams()
-  const currentJobId = id;
-  const job = jobs.find(jb => jb.id === currentJobId) ;
-  function formatPostedDate(dateString) {
+export default function FormatPostedDate(dateString) {
     const postedDate = new Date(dateString);
     const today = new Date();
 
@@ -42,10 +36,21 @@ export const OpportunityOverview = () => {
     return `Posted: Long ago`;
   }
 
+export const OpportunityOverview = () => {
+  const navigate = useNavigate();
+
+  const { id } = useParams()
+  const currentJobId = id;
+  const job = jobs.find(jb => jb.id === currentJobId) ;
+  const logoContent = job.logo ? (<img src={job.logo} alt={job.company} className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toUpperCase()}</div>)
+  
   const similarJobs = jobs.filter((sim) => {
       // return sim.id !== job.id && sim.Key_Details.Key_Skills.some((skill)=> job.Key_Details.Key_Skills.includes(skill));
       return sim.id !== job.id && sim.Department === job.Department;
+  
+     
   });
+  
   console.log(similarJobs)
   
   
@@ -108,7 +113,7 @@ export const OpportunityOverview = () => {
                         <h2 className="opp-topcard-job-title">{job.title}</h2>
                         <h5 className="Opportunities-job-company">{job.company}<span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> {job.ratings} <span className="Opportunities-divider">|</span><span className="opp-reviews"> {job.reviewNo} reviews</span></h5>
                       </div>
-                      <div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toUpperCase()}</div>
+                      <div className="Opportunities-job-logo-placeholder"> {logoContent}</div>
                     </div>
       
                     <div className="Opportunities-job-details">
@@ -134,7 +139,7 @@ export const OpportunityOverview = () => {
       
                     <div className="Opportunities-job-footer">
                       <div className="Opportunities-job-meta">
-                        <p>{formatPostedDate(job.posted)} <span className="Opportunities-divider">|</span> Openings: {job.openings} <span className="Opportunities-divider">|</span> Applicants: {job.applicants}</p>
+                        <p>{FormatPostedDate(job.posted)} <span className="Opportunities-divider">|</span> Openings: {job.openings} <span className="Opportunities-divider">|</span> Applicants: {job.applicants}</p>
                       </div>
       
                       <div className="Opportunities-job-actions">
@@ -235,7 +240,9 @@ export const OpportunityOverview = () => {
                         <h2 className="similar-job-title">{sim.title}</h2>
                         <p className="similar-job-company">{sim.company} <span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> {sim.ratings} <span className="Opportunities-divider">|</span><span> {sim.reviewNo} reviews</span></p>
                       </div>
-                      <div className="similar-job-logo-placeholder">C</div>
+                      <div className="similar-job-logo-placeholder">
+                        {sim.logo ? (<img src={sim.logo} alt={sim.company}  width='40px' className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{sim.company.charAt(0).toUpperCase()}</div>)}
+                      </div>
                     </div>
                     <div className="Opportunities-job-details">
                       <p className='Opportunities-detail-line'>{sim.tags} . {sim.WorkType} , {sim.WorkCategory}</p>

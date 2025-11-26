@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './CompaniesTab.css'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { Footer } from '../Components-LandingPage/Footer';
 import breifcase from '../assets/header_case.png'
@@ -22,79 +22,19 @@ import META from '../assets/META_BIG.png'
 import starIcon from '../assets/Star_icon.png'
 import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
+import Joblist from '../../data/dummydata';
 
 /* Below Code is removed after backend integration*/
-const companiesList = [
-  {
-    id: 1,
-    name: "Apple",
-    logo: Apple,
-    rating: 4.3,
-    reviews: "25k+",
-    desc: "Join us. Be you.",
-  },
-  {
-    id: 2,
-    name: "Wipro",
-    logo: Wipro,
-    rating: 4.3,
-    reviews: "55k+",
-    desc: "Grow with us. Be bold.",
-  },
-  {
-    id: 3,
-    name: "Cognizant",
-    logo: CTS,
-    rating: 3.7,
-    reviews: "55k+",
-    desc: "Leading ITeS company with global presence",
-  },
-  {
-    id: 4,
-    name: "Amazon",
-    logo: Amazon,
-    rating: 4.0,
-    reviews: "27.5k+",
-    desc: "World’s largest Internet company",
-  },
-  {
-    id: 5,
-    name: "Google",
-    logo: Google,
-    rating: 4.5,
-    reviews: "30k+",
-    desc: "Organizing the world’s information",
-  },
-  {
-    id: 6,
-    name: "Infosys",
-    logo: Infy,
-    rating: 4.1,
-    reviews: "50k+",
-    desc: "Navigate your next",
-  },
-  {
-    id: 7,
-    name: "TCS",
-    logo: Tcs,
-    rating: 4.2,
-    reviews: "65k+",
-    desc: "Building on belief",
-  },
-  {
-    id: 8,
-    name: "Meta",
-    logo: META,
-    rating: 4.4,
-    reviews: "22k+",
-    desc: "Bring the world closer together",
-  }
-];
+
 
 export const CompaniesTab = () => {
+  const companiesList = Joblist;
   const navigate = useNavigate();
+
   const [showNotification, setShowNotification] = useState(false);
   const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
+
+
 
   return (
     <>
@@ -149,25 +89,25 @@ export const CompaniesTab = () => {
           <h1 className="carousel-title">Find Jobs By Companies</h1>
         </div>
         <div className="companies-tab-grid">
-          {companiesList.map((company) => (
-            <div key={company.id} className="companies-tab-card">
+          {companiesList.map((comp) => (
+            <div key={comp.id} className="companies-tab-card">
               <div className="companies-tab-logo-container">
-                <img src={company.logo} alt={`${company.name} logo`} className="companies-tab-logo" />
+                <img src={comp.logo} alt={comp.company} className="companies-tab-logo" />
               </div>
-              <h3 className="companies-tab-name">{company.name}</h3>
+              <h3 className="companies-tab-name">{comp.company}</h3>
               <div className="companies-tab-rating-reviews">
                 <span className="star companies-tab-rating-star"><img src={starIcon} /></span>
-                <span className="companies-tab-rating">{company.rating}</span>
+                <span className="companies-tab-rating">{comp.ratings}</span>
                 <span className="companies-tab-separator">|</span>
-                <span className="companies-tab-reviews">{company.reviews} reviews</span>
+                <span className="companies-tab-reviews">{comp.reviewNo} reviews</span>
               </div>
-              <p className="companies-tab-desc">{company.desc}</p>
-              <button className="companies-tab-view-jobs-btn">View Jobs</button>
+              <p className="companies-tab-desc">{comp.companyOverview}</p>
+              <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${comp.company}`)} className="companies-tab-view-jobs-btn">View Jobs</button>
             </div>
           ))}
         </div>
         <div className="companies-tab-view-all-container">
-          <button className="carousel-view-all">View more</button>
+          <button  className="carousel-view-all">View more</button>
         </div>
       </div>
       <Footer />
