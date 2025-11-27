@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Opportunities.css'
-import {OpportunitiesCard} from "./OpportunitiesCard";
+import { OpportunitiesCard } from "./OpportunitiesCard";
 import Apple from '../assets/Apple-Logo.png'
 import Wipro from '../assets/WIT.png'
 import CTS from '../assets/CTSH_BIG.png'
@@ -758,9 +758,9 @@ import joblist from '../../data/dummydata.js'
 //     }
 //   }
 // ];
-  export const jobs = joblist;
-  console.log(jobs)
-  export const Opportunities = () => {
+export const jobs = joblist;
+// console.log(jobs)
+export const Opportunities = () => {
   const navigate = useNavigate();
 
   const [displayCount, setDisplayCount] = useState(8);
@@ -775,16 +775,16 @@ import joblist from '../../data/dummydata.js'
   //   setDisplayCount(jobs.length)
   //   console.log(displayCount)
   // };
-  
+
   return (
     <section className='Opportunities-section'>
-        <h2 className='Opportunities-title'>Opportunities Just For You</h2>
-        <div className="Opportunities-job-list">
-        { itemsToDisplay.map((job, id) => (
-          <OpportunitiesCard key={id} job={job}/>
+      <h2 className='Opportunities-title'>Opportunities Just For You</h2>
+      <div className="Opportunities-job-list">
+        {itemsToDisplay.map((job, id) => (
+          <OpportunitiesCard key={id} job={job} />
         ))}
       </div>
-      <button onClick={() =>navigate('/Job-portal/jobseeker/jobs')} className="Opportunities-view-more-btn">View More</button>
+      <button onClick={() => navigate('/Job-portal/jobseeker/jobs')} className="Opportunities-view-more-btn">View More</button>
       {/* optional Notification for End of the List (No data Found) */}
       {/* {jobs.length < displayCount ? (<p> No more datas Found</p> ):(<div></div>)} */}
     </section>

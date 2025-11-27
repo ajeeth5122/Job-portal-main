@@ -1,6 +1,84 @@
 .jobs-tab-search-bar {
     margin-top: 12rem;
-    margin-bottom: 10rem;
     margin-right: 15rem;
     margin-left: 15rem;
+}
+
+/* .Navigation-job-Tab{
+
+padding: 40px 20px;
+display: flex;
+justify-content: space-around;
+} */
+
+
+.Navigation-job-Tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.Navigation-job-Tab button {
+    cursor: pointer; /* Indicate it's clickable */
+    padding: 8px 15px; /* Comfortable padding inside the button */
+    margin: 0 10px; /* Space between the buttons and page number */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.3s, opacity 0.3s, border-color 0.3s; /* Smooth transitions for hover/disable states */
+    font-weight: 500; /* Medium font weight */
+    text-transform: capitalize; /* Ensure "Next" and "Previous" look consistent */
+    font-size: 14px;
+}
+.Navigation-btn {
+    background-color: #1E88E5; 
+    color: white;
+    border: 1px solid #1E88E5;
+    width: 100px; 
+}
+
+.Navigation-btn:hover:not(:disabled) {
+    background-color: #1E88E5; 
+    border-color: #1E88E5;
+}
+
+
+.Navigation-job-Tab button:disabled {
+    cursor: not-allowed;
+    background-color: #f8f9fa; 
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    opacity: 0.8;
+    width: 100px;
+}
+
+.Navigation-job-Tab .pageNum {
+    font-size: 16px; 
+    font-weight: 600;
+    color: #333; 
+    padding: 0 5px;
+}
+.page-numbers {
+  display: flex;
+  gap: 15px;
+}
+.page-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-btn.active {
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

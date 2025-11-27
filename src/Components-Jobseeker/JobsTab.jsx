@@ -13,10 +13,34 @@ import tick from '../assets/icon_tick.png'
 import { Opportunities } from './Opportunities';
 import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
+import Joblist from '../../data/dummydata';
+import { OpportunitiesCard } from './OpportunitiesCard';
+
+
 
 export const JobsTab = () => {
+    const jobs = Joblist;
+
     const [showNotification, setShowNotification] = useState(false);
     const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
+
+    const displayCount = 10;
+    // const [displayCount, setDisplayCount] = useState(10);
+    const [currentPage, setCurrentPage]=useState(1);
+
+    const indexofLastjob= currentPage * displayCount; 
+    const indexoffirstjob = indexofLastjob - displayCount;
+    
+    const currentPost = jobs.slice(indexoffirstjob,indexofLastjob);
+    
+    // console.log(indexoffirstjob)
+    const totalpages = Math.ceil(jobs.length/displayCount);
+    const HandlePrev=()=>{
+        setCurrentPage(currentPage-1)
+    }
+    const HandleNext=()=>{
+        setCurrentPage(currentPage+1)   
+    }
 
     return (
         <>
@@ -65,9 +89,35 @@ export const JobsTab = () => {
                     <button className="search-button">Search</button>
                 </div>
             </div>
+            <section className='Opportunities-section'>
+            <div className='Opportunities-section'>
+                <h2 className='Opportunities-title'>Just For You</h2>
+                <div className="Opportunities-job-list">
+                    { currentPost.map((job, id) => (
+                      <OpportunitiesCard key={id} job={job}/>
+                    ))}
+                </div>
+            </div>
+            </section>
+           
             
-            <Opportunities />
+            <div className="Navigation-job-Tab" >
+                <button onClick={()=>HandlePrev()} disabled={currentPage === 1} className='Navigation-btn'>Previous</button>
+                <div className="page-numbers">
+                {[...Array(totalpages)].map((_, i) => (
+            <button
+              key={i}
+              className={ `page-btn ${currentPage === i + 1 ? "active" : ""}`}
+              onClick={() => setCurrentPage(i + 1)}>
+             {i + 1}
+            </button>
+          ))}
+        </div>
+                <button onClick={()=>HandleNext()}  disabled={currentPage === totalpages} className='Navigation-btn'>Next</button>
+            </div>
+            
 
+            
             <Footer />
         </>
     )

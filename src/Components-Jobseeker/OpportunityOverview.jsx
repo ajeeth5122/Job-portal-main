@@ -44,12 +44,7 @@ export const OpportunityOverview = () => {
   const job = jobs.find(jb => jb.id === currentJobId) ;
   const logoContent = job.logo ? (<img src={job.logo} alt={job.company} className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{job.company.charAt(0).toUpperCase()}</div>)
   
-  const similarJobs = jobs.filter((sim) => {
-      // return sim.id !== job.id && sim.Key_Details.Key_Skills.some((skill)=> job.Key_Details.Key_Skills.includes(skill));
-      return sim.id !== job.id && sim.Department === job.Department;
-  
-     
-  });
+  const similarJobs = jobs.filter((sim) => {return sim.id !== job.id && sim.Department === job.Department;  });// return sim.id !== job.id && sim.Key_Details.Key_Skills.some((skill)=> job.Key_Details.Key_Skills.includes(skill));
   
   console.log(similarJobs)
   
@@ -113,9 +108,7 @@ export const OpportunityOverview = () => {
                         <h2 className="opp-topcard-job-title">{job.title}</h2>
                         <h5 className="Opportunities-job-company">{job.company}<span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> {job.ratings} <span className="Opportunities-divider">|</span><span className="opp-reviews"> {job.reviewNo} reviews</span></h5>
                       </div>
-                      <div className="Opportunities-job-logo-placeholder">
-                        {logoContent}
-                      </div>
+                      {logoContent}
                     </div>
       
                     <div className="Opportunities-job-details">

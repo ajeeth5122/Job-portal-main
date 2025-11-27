@@ -3796,6 +3796,7 @@ export const Joblist = [
     Department: "Product Management",
     KeySkills: ["Product Strategy", "Roadmapping", "Agile/Scrum", "Market Analysis", "User Stories", "Stakeholder Management"]
   }
+  
 ]
 
 export default Joblist;

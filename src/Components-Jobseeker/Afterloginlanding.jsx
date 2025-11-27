@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Afterloginlanding.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { JHeader } from './JHeader';
 import { JMainsection } from './JMainsection';
 import { Jobsbycompany } from './Jobsbycompany';
@@ -45,7 +45,7 @@ const notificationsData = [
         time: '17 Aug 2025, 9:30 am',
         isNew: false,
     },
-     {
+    {
         id: 6,
         text: '5 new jobs match your preferences',
         time: '17 Aug 2025, 9:30 am',
@@ -55,10 +55,10 @@ const notificationsData = [
 export { notificationsData };
 
 export const Afterloginlanding = () => {
-
+    const navigate = useNavigate();
     const [showNotification, setShowNotification] = useState(false);
     const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
-    
+
     return (
         <>
             <header className="header">
@@ -72,7 +72,7 @@ export const Afterloginlanding = () => {
                 <div className="auth-links">
                     <Link to="/Job-portal/jobseeker/myjobs"><img className='header-icons' src={breifcase} alt='My Jobs' /></Link>
                     <div><img className='header-icons' src={chat} alt='Messages' /></div>
-                    <div onClick={() => setShowNotification(!showNotification)}><img className='header-icons' src={newNotificationsCount > 0 ? bell_dot: bell} alt='Notifications' /></div>
+                    <div onClick={() => setShowNotification(!showNotification)}><img className='header-icons' src={newNotificationsCount > 0 ? bell_dot : bell} alt='Notifications' /></div>
                     <Link to="/Job-portal/jobseeker/myprofile"><img className='header-icons' src={profile} alt='My Profile' /></Link>
                 </div>
                 <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
