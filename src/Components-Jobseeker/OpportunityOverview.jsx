@@ -113,7 +113,9 @@ export const OpportunityOverview = () => {
                         <h2 className="opp-topcard-job-title">{job.title}</h2>
                         <h5 className="Opportunities-job-company">{job.company}<span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> {job.ratings} <span className="Opportunities-divider">|</span><span className="opp-reviews"> {job.reviewNo} reviews</span></h5>
                       </div>
-                      <div className="Opportunities-job-logo-placeholder"> {logoContent}</div>
+                      <div className="Opportunities-job-logo-placeholder">
+                        {logoContent}
+                      </div>
                     </div>
       
                     <div className="Opportunities-job-details">
@@ -240,8 +242,8 @@ export const OpportunityOverview = () => {
                         <h2 className="similar-job-title">{sim.title}</h2>
                         <p className="similar-job-company">{sim.company} <span className="Opportunities-divider">|</span><span className="star"><img src={starIcon} /></span> {sim.ratings} <span className="Opportunities-divider">|</span><span> {sim.reviewNo} reviews</span></p>
                       </div>
-                      <div className="similar-job-logo-placeholder">
-                        {sim.logo ? (<img src={sim.logo} alt={sim.company}  width='40px' className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{sim.company.charAt(0).toUpperCase()}</div>)}
+                      <div >
+{sim.logo ? (<img src={sim.logo} alt={sim.company}  width='40px' className="Opportunities-job-logo" />) : (<div className="Opportunities-job-logo-placeholder">{sim.company.charAt(0).toUpperCase()}</div>)}
                       </div>
                     </div>
                     <div className="Opportunities-job-details">
