@@ -13,21 +13,24 @@ import starIcon from '../assets/Star_icon.png'
 import time from '../assets/opportunity_time.png'
 import experience from '../assets/opportunity_bag.png'
 import place from '../assets/opportunity_location.png'
-import './SearchbyCompany.css'
+import './JobThroughCompany.css'
 
 
-const SearchbyCompany = () => {
-    const {companyName}=useParams()
+const JobsThroughCompany = () => {
 
-    const currentCompanyName = companyName;
+    const {companyId} =useParams()
 
-    const filteredJobs = Joblist.filter(comp => comp.company === currentCompanyName);
+    const currentCompanyId = companyId;
+
+    const filteredJobs = Joblist.filter(comp => comp.companyId === currentCompanyId);
 
     console.log(filteredJobs)
 
     
   return (
+
     <>
+    
          <header className="header">
               <div className="logo">job portal</div>
               <nav className="nav-links">
@@ -45,8 +48,31 @@ const SearchbyCompany = () => {
             </header>
         <div className='job-search-companies'>
         <section className='Opportunities-section'>
-        <h2 className='Opportunities-title'>{currentCompanyName}</h2>
-        <div className="Opportunities-job-list">
+          <div className="company-header-container">
+ 
+      <div className="company-details-section">
+        <button className="back-button">Back</button>
+        <div className='company-main-section'>
+          <img className='company-logo' src={filteredJobs[0].logo} alt="logo"  width={120} />
+        <div className="company-info-card">
+          
+          <h2 className="company-name">{filteredJobs[0].company}</h2>
+          <div className="company-title-container">
+            
+           <span className="star"><img src={starIcon} /> ratings</span>  <span className="Opportunities-divider">|</span><span className="opp-reviews">reviews</span>
+          </div>
+          
+          
+        </div>
+        <div className='job-by-company-moto'>
+            <p className="company-moto">Grow with us. Be bold.</p>
+          </div>
+          </div>
+      </div>
+    </div>
+      <div className="Opportunities-job-list">
+
+         
         { filteredJobs.map((job, id) => (
           <OpportunitiesCard key={id} job={job}/>
         ))}
@@ -61,4 +87,4 @@ const SearchbyCompany = () => {
   
 }
 
-export default SearchbyCompany
+export default JobsThroughCompany

@@ -61,7 +61,7 @@ const displaycompanies= findbyCompaniesNameList.slice(0,9)
                             <p className='carousel-company-rating'><span className="star"><img src={starIcon} /></span> {company.ratings} | {company.reviewNo} reviews</p>
                         </div>
                         <p className="carousel-desc">{company.companyId}</p>
-                        <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${company.company}` )} className="carousel-view-jobs">View jobs</button>
+                        <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${company.companyId}` )} className="carousel-view-jobs">View jobs</button>
                     </div>
                 ))}
             </Slider>

@@ -16,7 +16,8 @@ import { MyJobs } from './Components-Jobseeker/MyJobs'
 import { JobsTab } from './Components-Jobseeker/JobsTab'
 import { CompaniesTab } from './Components-Jobseeker/CompaniesTab'
 import { MyProfile } from './Components-Jobseeker/MyProfile'
-import SearchbyCompany from './Components-Jobseeker/SearchbyCompany'
+import JobThroughCompany from './Components-Jobseeker/JobsThroughCompany'
+import JobsThroughCompany from './Components-Jobseeker/JobsThroughCompany'
 
 const router = createBrowserRouter([
 //   {For Local Use}
@@ -81,8 +82,8 @@ const router = createBrowserRouter([
   element: <CompaniesTab />,
 },
 {
-  path: '/Job-portal/jobseeker/companies/:companyName',
-  element: <SearchbyCompany />,
+  path: '/Job-portal/jobseeker/companies/:companyId',
+  element: <JobsThroughCompany />,
 },
 {
   path: '/Job-portal/jobseeker/myprofile',
