@@ -4,13 +4,15 @@ import Wipro from '../assets/WIT.png'
 import CTS from '../assets/CTSH_BIG.png'
 import Amazon from '../assets/AMZN_BIG.png'
 import Infy from '../assets/INFY_BIG.png'
-import Tcs from '../assets/TCS.png'
+import TCS from '../assets/TCS.png'
 import META from '../assets/META_BIG.png'
 import starIcon from '../assets/Star_icon.png'
 import left from '../assets/left_arrow.png'
 import right from '../assets/right_arrow.png'
 import { useNavigate } from "react-router-dom";
 import Joblist from '../../data/dummydata';
+import Apple from '../assets/Apple-Logo.png'
+
 /* Below Code is removed after backend integration*/
 // const findbyCompaniesNameList = Joblist;
 
@@ -19,6 +21,66 @@ import Joblist from '../../data/dummydata';
 export const Jobsbycompany = () => {
 
 const findbyCompaniesNameList = Joblist;
+
+  const CompanyList = [
+      {companyId: "AIN001",
+        name : "Apple IN",
+        logo: Apple,
+        rating: 4.3,
+        reviews: "110k+",
+        desc: "Step into the Real One",
+      },
+    {
+        companyId: "WIB001",
+        name: "Wipro",
+        logo: Wipro,
+        rating: 4.3,
+        reviews: "55k+",
+        desc: "Grow with us. Be bold.",
+    },
+    {
+        companyId: "CTS001",
+        name: "Cognizant",
+        logo: CTS,
+        rating: 3.7,
+        reviews: "55k+",
+        desc: "Leading ITeS company with global presence",
+    },
+    {
+        companyId: "AMZ001",
+        name: "Amazon",
+        logo: Amazon,
+        rating: 4.0,
+        reviews: "27.5k+",
+        desc: "World’s largest Internet company",
+    },
+    {
+        companyId: "IST001",
+        name: "Infosys",
+        logo: Infy,
+        rating: 4.1,
+        reviews: "50k+",
+        desc: "Navigate your next",
+    },
+    {
+        companyId: "TCS001",
+        name: "TCS",
+        logo: TCS,
+        rating: 4.2,
+        reviews: "65k+",
+        desc: "Building on belief",
+    },
+    {
+        companyId: "MET001",
+        name: "Meta",
+        logo: META,
+        rating: 4.4,
+        reviews: "22k+",
+        desc: "Bring the world closer together",
+    }
+];
+
+
 
 const displaycompanies= findbyCompaniesNameList.slice(0,9)
 
@@ -53,14 +115,14 @@ const displaycompanies= findbyCompaniesNameList.slice(0,9)
         <section className="carousel-wrapper">
             <h2 className="carousel-title">Find Jobs By Company</h2>
             <Slider {...settings}>
-                {displaycompanies.map((company) => (
+                {CompanyList.map((company) => (
                     <div className="carousel-card" key={company.id}>
-                        <img className="carousel-company-logo" src={company.logo} alt={company.company} />
+                        <img className="carousel-company-logo" src={company.logo} alt={company.name} />
                         <div className="carousel-card-header">
-                            <h3>{company.company}</h3>
-                            <p className='carousel-company-rating'><span className="star"><img src={starIcon} /></span> {company.ratings} | {company.reviewNo} reviews</p>
+                            <h3>{company.name}</h3>
+                            <p className='carousel-company-rating'><span className="star"><img src={starIcon} /></span> {company.rating} | {company.reviews} reviews</p>
                         </div>
-                        <p className="carousel-desc">{company.companyId}</p>
+                        <p className="carousel-desc">{company.desc}</p>
                         <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${company.companyId}` )} className="carousel-view-jobs">View jobs</button>
                     </div>
                 ))}

@@ -1,18 +1,20 @@
 import React, {  } from 'react'
 import Joblist from '../../data/dummydata'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { OpportunitiesCard } from './OpportunitiesCard';
 import breifcase from '../assets/header_case.png'
 import chat from '../assets/header_message.png'
 import bell from '../assets/header_bell.png'
 import profile from '../assets/header_profile.png'
-import search from '../assets/icon_search.png'
-import location from '../assets/icon_location.png'
-import tick from '../assets/icon_tick.png'
+import TCS from '../assets/TCS.png'
+import Apple from '../assets/Apple-Logo.png'
+import Wipro from '../assets/WIT.png'
 import starIcon from '../assets/Star_icon.png'
-import time from '../assets/opportunity_time.png'
-import experience from '../assets/opportunity_bag.png'
-import place from '../assets/opportunity_location.png'
+import CTS from '../assets/CTSH_BIG.png'
+import Amazon from '../assets/AMZN_BIG.png'
+import Infy from '../assets/INFY_BIG.png'
+import META from '../assets/META_BIG.png'
+import Google from '../assets/GOOG.png'
 import './JobThroughCompany.css'
 
 
@@ -25,7 +27,74 @@ const JobsThroughCompany = () => {
     const filteredJobs = Joblist.filter(comp => comp.companyId === currentCompanyId);
 
     console.log(filteredJobs)
-
+    
+    const findbyCompaniesNameList = [
+      {companyId: "AIN001",
+        name : "Apple IN",
+        logo: Apple,
+        rating: 4.3,
+        reviews: "110k+",
+        desc: "Step into the Real One",
+      },
+    {
+        companyId: "WIB001",
+        name: "Wipro",
+        logo: Wipro,
+        rating: 4.3,
+        reviews: "55k+",
+        desc: "Grow with us. Be bold.",
+    },
+    {
+        companyId: "CTS001",
+        name: "Cognizant",
+        logo: CTS,
+        rating: 3.7,
+        reviews: "55k+",
+        desc: "Leading ITeS company with global presence",
+    },
+    {
+        companyId: "AMZ001",
+        name: "Amazon",
+        logo: Amazon,
+        rating: 4.0,
+        reviews: "27.5k+",
+        desc: "World’s largest Internet company",
+    },
+    {
+        companyId: "IST001",
+        name: "Infosys",
+        logo: Infy,
+        rating: 4.1,
+        reviews: "50k+",
+        desc: "Navigate your next",
+    },
+    {
+        companyId: "TCS001",
+        name: "TCS",
+        logo: TCS,
+        rating: 4.2,
+        reviews: "65k+",
+        desc: "Building on belief",
+    },
+    {
+        companyId: "MET001",
+        name: "Meta",
+        logo: META,
+        rating: 4.4,
+        reviews: "22k+",
+        desc: "Bring the world closer together",
+    },
+     {
+        companyId: "GGL001",
+        name: "Google",
+        logo: Google,
+        rating: 4.4,
+        reviews: "22k+",
+        desc: "Bring the world closer together",
+    }
+];
+     const CompanyTitle = findbyCompaniesNameList.find(comp => comp.companyId === currentCompanyId);
+    const navigate =useNavigate();
     
   return (
 
@@ -51,21 +120,24 @@ const JobsThroughCompany = () => {
           <div className="company-header-container">
  
       <div className="company-details-section">
-        <button className="back-button">Back</button>
+        <button className="back-btn" onClick={() => navigate(-1)}>Back</button>
         <div className='company-main-section'>
-          <img className='company-logo' src={filteredJobs[0].logo} alt="logo"  width={120} />
+          <div className='company-logo-container'>
+          <img className='company-logo' src={CompanyTitle.logo} alt="logo"  />
+          </div>
+          
         <div className="company-info-card">
           
-          <h2 className="company-name">{filteredJobs[0].company}</h2>
+          <h2 className="company-name">{CompanyTitle.name}</h2>
           <div className="company-title-container">
             
-           <span className="star"><img src={starIcon} /> ratings</span>  <span className="Opportunities-divider">|</span><span className="opp-reviews">reviews</span>
+           <span className="star"><img src={starIcon} /> {CompanyTitle.rating} ratings</span>  <span className="company-divider">|</span><span className="opp-reviews">{CompanyTitle.reviews}reviews</span>
           </div>
           
           
         </div>
         <div className='job-by-company-moto'>
-            <p className="company-moto">Grow with us. Be bold.</p>
+            <p className="company-moto">{CompanyTitle.desc}</p>
           </div>
           </div>
       </div>

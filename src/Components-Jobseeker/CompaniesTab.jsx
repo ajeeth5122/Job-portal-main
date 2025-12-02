@@ -17,7 +17,7 @@ import CTS from '../assets/CTSH_BIG.png'
 import Amazon from '../assets/AMZN_BIG.png'
 import Google from '../assets/GOOG.png'
 import Infy from '../assets/INFY_BIG.png'
-import Tcs from '../assets/TCS.png'
+import TCS from '../assets/TCS.png'
 import META from '../assets/META_BIG.png'
 import starIcon from '../assets/Star_icon.png'
 import { notificationsData } from './Afterloginlanding';
@@ -34,7 +34,71 @@ export const CompaniesTab = () => {
   const [showNotification, setShowNotification] = useState(false);
   const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
   const displayCompanies = companiesList.slice(0,8);
-
+   const findbyCompaniesNameList = [
+        {companyId: "AIN001",
+          name : "Apple IN",
+          logo: Apple,
+          rating: 4.3,
+          reviews: "110k+",
+          desc: "Step into the Real One",
+        },
+      {
+          companyId: "WIB001",
+          name: "Wipro",
+          logo: Wipro,
+          rating: 4.3,
+          reviews: "55k+",
+          desc: "Grow with us. Be bold.",
+      },
+      {
+          companyId: "CTS001",
+          name: "Cognizant",
+          logo: CTS,
+          rating: 3.7,
+          reviews: "55k+",
+          desc: "Leading ITeS company with global presence",
+      },
+      {
+          companyId: "AMZ001",
+          name: "Amazon",
+          logo: Amazon,
+          rating: 4.0,
+          reviews: "27.5k+",
+          desc: "World’s largest Internet company",
+      },
+      {
+          companyId: "IST001",
+          name: "Infosys",
+          logo: Infy,
+          rating: 4.1,
+          reviews: "50k+",
+          desc: "Navigate your next",
+      },
+      {
+          companyId: "TCS001",
+          name: "TCS",
+          logo: TCS,
+          rating: 4.2,
+          reviews: "65k+",
+          desc: "Building on belief",
+      },
+      {
+          companyId: "MET001",
+          name: "Meta",
+          logo: META,
+          rating: 4.4,
+          reviews: "22k+",
+          desc: "Bring the world closer together",
+      },
+       {
+          companyId: "GGL001",
+          name: "Google",
+          logo: Google,
+          rating: 4.4,
+          reviews: "22k+",
+          desc: "Bring the world closer together",
+      }
+  ];
 
   return (
     <>
@@ -89,20 +153,20 @@ export const CompaniesTab = () => {
           <h1 className="carousel-title">Find Jobs By Companies</h1>
         </div>
         <div className="companies-tab-grid">
-          {displayCompanies.map((comp) => (
+          {findbyCompaniesNameList.map((comp) => (
             <div key={comp.id} className="companies-tab-card">
               <div className="companies-tab-logo-container">
-                <img src={comp.logo} alt={comp.company} className="companies-tab-logo" />
+                <img src={comp.logo} alt={comp.name} className="companies-tab-logo" />
               </div>
-              <h3 className="companies-tab-name">{comp.company}</h3>
+              <h3 className="companies-tab-name">{comp.name}</h3>
               <div className="companies-tab-rating-reviews">
                 <span className="star companies-tab-rating-star"><img src={starIcon} /></span>
-                <span className="companies-tab-rating">{comp.ratings}</span>
+                <span className="companies-tab-rating">{comp.rating}</span>
                 <span className="companies-tab-separator">|</span>
-                <span className="companies-tab-reviews">{comp.reviewNo} reviews</span>
+                <span className="companies-tab-reviews">{comp.reviews} reviews</span>
               </div>
-              <h5 className="companies-tab-desc">ID:{comp.companyId}</h5>
-              <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${comp.company}`)} className="companies-tab-view-jobs-btn">View Jobs</button>
+              <h5 className="companies-tab-desc">{comp.desc}</h5>
+              <button onClick={()=>navigate(`/Job-portal/jobseeker/companies/${comp.companyId}`)} className="companies-tab-view-jobs-btn">View Jobs</button>
             </div>
           ))}
         </div>
