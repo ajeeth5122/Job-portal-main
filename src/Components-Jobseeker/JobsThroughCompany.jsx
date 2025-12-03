@@ -1,4 +1,4 @@
-import React, {  } from 'react'
+import React, { useState } from 'react'
 import Joblist from '../../data/dummydata'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { OpportunitiesCard } from './OpportunitiesCard';
@@ -15,6 +15,7 @@ import Amazon from '../assets/AMZN_BIG.png'
 import Infy from '../assets/INFY_BIG.png'
 import META from '../assets/META_BIG.png'
 import Google from '../assets/GOOG.png'
+
 import './JobThroughCompany.css'
 
 
@@ -95,6 +96,23 @@ const JobsThroughCompany = () => {
 ];
      const CompanyTitle = findbyCompaniesNameList.find(comp => comp.companyId === currentCompanyId);
     const navigate =useNavigate();
+    const displayCount = 10;
+
+    const [currentPage, setCurrentPage]=useState(1);
+        const indexofLastjob= currentPage * displayCount; 
+        const indexoffirstjob = indexofLastjob - displayCount;
+    
+         const currentPost = findbyCompaniesNameList.slice(indexoffirstjob,indexofLastjob);
+    
+        const totalpages = Math.ceil(findbyCompaniesNameList.length/displayCount);
+    
+          const HandlePrev=()=>{
+            setCurrentPage(currentPage-1)
+        }
+        const HandleNext=()=>{
+            setCurrentPage(currentPage+1)   
+        }
+    
     
   return (
 
@@ -149,7 +167,21 @@ const JobsThroughCompany = () => {
           <OpportunitiesCard key={id} job={job}/>
         ))}
       </div>
-        <button className='Opportunities-view-more-btn'>ViewMore</button>
+        {/* <button className='Opportunities-view-more-btn'>ViewMore</button> */}
+         <div className="Navigation-job-Tab" >
+                <button onClick={()=>HandlePrev()} disabled={currentPage === 1} className='Navigation-btn'>Previous</button>
+                <div className="page-numbers">
+                {[...Array(totalpages)].map((_, i) => (
+            <button
+              key={i}
+              className={ `page-btn ${currentPage === i + 1 ? "active" : ""}`}
+              onClick={() => setCurrentPage(i + 1)}>
+             {i + 1}
+            </button>
+          ))}
+        </div>
+            <button onClick={()=>HandleNext()}  disabled={currentPage === totalpages} className='Navigation-btn'>Next</button>
+        </div>
     </section>
      </div>
     </>

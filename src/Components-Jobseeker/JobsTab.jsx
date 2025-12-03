@@ -32,8 +32,7 @@ export const JobsTab = () => {
     const indexoffirstjob = indexofLastjob - displayCount;
     
     const currentPost = jobs.slice(indexoffirstjob,indexofLastjob);
-    
-    // console.log(indexoffirstjob)
+
     const totalpages = Math.ceil(jobs.length/displayCount);
     const HandlePrev=()=>{
         setCurrentPage(currentPage-1)
