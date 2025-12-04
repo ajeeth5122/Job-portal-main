@@ -26,7 +26,7 @@ export const JHeader = () => {
     ];
     const NavIcons =[
         {image: breifcase, path: "/Job-portal/jobseeker/myjobs"},
-        {image: chat},
+        {image: chat , path: ""},
         //  {image: bell},
         // {image: profile}
        
