@@ -17,6 +17,7 @@ import META from '../assets/META_BIG.png'
 import Google from '../assets/GOOG.png'
 
 import './JobThroughCompany.css'
+import { JHeader } from './JHeader';
 
 
 const JobsThroughCompany = () => {
@@ -118,7 +119,7 @@ const JobsThroughCompany = () => {
 
     <>
     
-         <header className="header">
+         {/* <header className="header">
               <div className="logo">job portal</div>
               <nav className="nav-links">
                 <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -132,7 +133,8 @@ const JobsThroughCompany = () => {
                 <div><img className='header-icons' src={bell} alt='Notifications' /></div>
                 <div><img className='header-icons' src={profile} alt='My Profile' /></div>
               </div>
-            </header>
+            </header> */}
+            <JHeader/>
         <div className='job-search-companies'>
         <section className='Opportunities-section'>
           <div className="company-header-container">

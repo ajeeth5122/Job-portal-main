@@ -61,7 +61,7 @@ export const Afterloginlanding = () => {
 
     return (
         <>
-            <header className="header">
+            {/* <header className="header">
                 <div className="logo">job portal</div>
                 <nav className="nav-links">
                     <a href="#" className="nav-item nav-active" >Home</a>
@@ -76,7 +76,8 @@ export const Afterloginlanding = () => {
                     <Link to="/Job-portal/jobseeker/myprofile"><img className='header-icons' src={profile} alt='My Profile' /></Link>
                 </div>
                 <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
-            </header>
+            </header> */}
+           <JHeader/>
             <JMainsection />
             <Opportunities />
             <Jobsbycompany />

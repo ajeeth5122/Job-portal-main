@@ -11,6 +11,7 @@ import { SavedJobsCard } from './SavedJobsCard';
 import { AppliedJobCard } from './AppliedJobCard';
 import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
+import { JHeader } from './JHeader';
 
 /* Below Code is removed after backend integration*/
 const savedJobsList = [
@@ -154,12 +155,12 @@ const appliedJobsList = [
 
 export const MyJobs = () => {
     const [activeTab, setActiveTab] = useState("saved");
-    const [showNotification, setShowNotification] = useState(false);
-    const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
+    // const [showNotification, setShowNotification] = useState(false);
+    // const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
 
     return (
         <>
-            <header className="header">
+            {/* <header className="header">
                 <div className="logo">job portal</div>
                 <nav className="nav-links">
                     <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -174,8 +175,8 @@ export const MyJobs = () => {
                     <Link to="/Job-portal/jobseeker/myprofile"><img className='header-icons' src={profile} alt='My Profile' /></Link>
                 </div>
                 <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
-            </header>
-
+            </header> */}
+            <JHeader/>
             <main>
                 <div className='myjobs-main-info'>
                     <h1>"My Jobs"</h1>

@@ -8,6 +8,7 @@ import bell_dot from '../assets/header_bell_dot.png'
 import profile from '../assets/header_profile.png'
 import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
+import { JHeader } from './JHeader';
 
 
 export const MyProfile = () => {
@@ -15,7 +16,7 @@ export const MyProfile = () => {
     const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
     return (
         <>
-            <header className="header">
+            {/* <header className="header">
                 <div className="logo">job portal</div>
                 <nav className="nav-links">
                     <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -30,7 +31,8 @@ export const MyProfile = () => {
                     <Link to="/Job-portal/jobseeker/myprofile" className="nav-icon-active"><img className='header-icons' src={profile} alt='My Profile' /></Link>
                 </div>
                 <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
-            </header>
+            </header> */}
+            <JHeader/>
 
             <main>
                 <div className='profile-main-desc'>

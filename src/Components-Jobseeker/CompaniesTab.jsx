@@ -23,6 +23,7 @@ import starIcon from '../assets/Star_icon.png'
 import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
 import Joblist from '../../data/dummydata';
+import { JHeader } from './JHeader';
 
 /* Below Code is removed after backend integration*/
 
@@ -31,8 +32,8 @@ export const CompaniesTab = () => {
   const companiesList = Joblist;
   const navigate = useNavigate();
 
-  const [showNotification, setShowNotification] = useState(false);
-  const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
+  // const [showNotification, setShowNotification] = useState(false);
+  // const newNotificationsCount = notificationsData.filter(n => n.isNew).length;
   const displayCompanies = companiesList.slice(0,8);
    const findbyCompaniesNameList = [
         {companyId: "AIN001",
@@ -102,7 +103,7 @@ export const CompaniesTab = () => {
 
   return (
     <>
-      <header className="header">
+      {/* <header className="header">
         <div className="logo">job portal</div>
         <nav className="nav-links">
           <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -117,8 +118,8 @@ export const CompaniesTab = () => {
           <Link to="/Job-portal/jobseeker/myprofile"><img className='header-icons' src={profile} alt='My Profile' /></Link>
         </div>
         <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
-      </header>
-
+      </header> */}
+      <JHeader/>
       <div className='jobs-tab-search-bar'>
         <div className="search-bar">
           <div className="search-field">
@@ -154,7 +155,7 @@ export const CompaniesTab = () => {
         </div>
         <div className="companies-tab-grid">
           {findbyCompaniesNameList.map((comp) => (
-            <div key={comp.id} className="companies-tab-card">
+            <div key={comp.companyId} className="companies-tab-card">
               <div className="companies-tab-logo-container">
                 <img src={comp.logo} alt={comp.name} className="companies-tab-logo" />
               </div>

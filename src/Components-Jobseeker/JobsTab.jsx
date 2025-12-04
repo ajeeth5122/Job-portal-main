@@ -15,6 +15,7 @@ import { notificationsData } from './Afterloginlanding';
 import { JNotification } from './JNotification';
 import Joblist from '../../data/dummydata';
 import { OpportunitiesCard } from './OpportunitiesCard';
+import { JHeader } from './JHeader';
 
 
 
@@ -43,7 +44,7 @@ export const JobsTab = () => {
 
     return (
         <>
-            <header className="header">
+            {/* <header className="header">
                 <div className="logo">job portal</div>
                 <nav className="nav-links">
                     <Link to="/Job-portal/jobseeker/" className="nav-item" >Home</Link>
@@ -58,7 +59,8 @@ export const JobsTab = () => {
                     <Link to="/Job-portal/jobseeker/myprofile"><img className='header-icons' src={profile} alt='My Profile' /></Link>
                 </div>
                 <JNotification notificationsData={notificationsData} showNotification={showNotification} setShowNotification={setShowNotification} />
-            </header>
+            </header> */}
+            <JHeader/>
 
             <div className='jobs-tab-search-bar'>
                 <div className="search-bar">
